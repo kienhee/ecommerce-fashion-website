@@ -1,0 +1,54 @@
+@import "../../assets/scss/_variable.scss";
+@import "../../assets/scss/_mixin.scss";
+.layout {
+  padding: 120px 0;
+  &__container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    grid-gap: 40px 20px;
+  }
+  &__item {
+    height: 412px;
+    cursor: pointer;
+    border-radius: 8px;
+    overflow: hidden;
+  }
+
+  &__img {
+    height: 342px;
+    margin-bottom: 16px;
+    overflow: hidden;
+    & img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    & img:hover {
+      transition: all 3.25s linear;
+      transform: scale(1.5);
+    }
+  }
+  &__name {
+    @include text(1.125rem, 700);
+    color: $color-dark;
+    margin-bottom: 5px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 1; /* number of lines to show */
+    line-clamp: 1;
+    -webkit-box-orient: vertical;
+  }
+  &__price {
+    @include text(1rem, 400);
+    color: $color-primary;
+  }
+  &__name,
+  &__price {
+    text-align: center;
+  }
+}
+@media only screen and(max-width: 46.188rem){
+  .layout {
+  padding: 70px 0;}
+}

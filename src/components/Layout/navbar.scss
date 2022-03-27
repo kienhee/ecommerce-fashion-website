@@ -1,0 +1,111 @@
+@import "../../assets/scss/_variable.scss";
+@import "../../assets/scss/_mixin.scss";
+#header {
+  padding: 25px 0;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background-color: $color-light;
+}
+.navbar {
+  @include flex(space-between, center);
+
+  &__logo {
+    @include text(2.25rem, 400);
+  }
+  &__menu {
+    font-family: $font-secondary;
+    display: flex;
+    gap: 0 50px;
+  }
+  &__feature {
+    display: flex;
+    gap: 0 30px;
+  }
+  &__link {
+    @include text(1.125rem, 700);
+  }
+  &__icon {
+    @include text(1.375rem, 700);
+  }
+  &__cart {
+    position: relative;
+    &-amount {
+      position: absolute;
+      top: 0;
+      right: -10px;
+      width: 15px;
+      height: 15px;
+      background-color: $color-primary;
+      border-radius: 5rem;
+      font-size: 8px;
+      color: $color-light;
+      text-align: center;
+    }
+  }
+  &__cart:hover {
+    color: $color-primary;
+  }
+  &__user:hover {
+    color: $color-primary;
+  }
+
+  &__mobile {
+    display: none;
+    user-select: none;
+  }
+}
+.icon__mobile {
+  display: none;
+}
+@media only screen and(max-width: 46.188rem) {
+  #header {
+    padding: 10px 0;
+  }
+  .icon__mobile {
+    display: block;
+    font-size: 1.25rem; //20px;
+    color: $color-primary;
+  }
+  .navbar {
+    @include flex(space-between, center);
+
+    &__logo {
+      font-size: 1.25rem;
+      font-weight: 700;
+    }
+    &__menu {
+      position: fixed;
+      color: $color-dark;
+      justify-content: center;
+      align-items: center;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 75px;
+      background-color: $color-light;
+      z-index: 11;
+    }
+
+    &__link {
+      @include text(1.125rem, 700);
+      color: #000;
+      text-align: center;
+      & p {
+        margin-top: 5px;
+        @include text(0.75rem, 400);
+        color: $color-dark-light;
+      }
+    }
+    &__icon {
+      @include text(1.375rem, 700);
+
+      color: $color-primary;
+    }
+    &__mobile {
+      font-size: 1.5rem; //24px;
+      display: block;
+      align-self: flex-end;
+    }
+  }
+}
