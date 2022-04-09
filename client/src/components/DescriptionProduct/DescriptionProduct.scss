@@ -1,0 +1,24 @@
+.tab {
+  &__btn {
+    font-weight: 700;
+    border: 1px solid #ebebeb;
+    color: #000;
+  }
+  &__btn:nth-last-child(2) {
+    background: #fbfbfb;
+    color: #818181;
+  }
+  &__content {
+    border: 1px solid #ebebeb;
+    padding: 50px;
+    color: #555555;
+    margin-bottom: 10px;
+  }
+}
+@media only screen and(max-width: 46.188rem) {
+  .tab {
+    &__content {
+      padding: 10px;
+    }
+  }
+}

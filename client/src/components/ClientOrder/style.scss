@@ -1,0 +1,25 @@
+.order__table {
+    border-collapse: collapse;
+    width: 100%;
+   margin: 50px 0;
+   & td,
+    th {
+    border-top: 1px solid #EBEBEB;
+    border-bottom: 1px solid #EBEBEB;
+        text-align: left;
+        padding: 18px;
+    }
+}
+
+.order__title{
+    font-weight: 700;
+}
+.order__message{
+    font-family: 'Lato';
+    font-weight: 400;
+    padding: 20px 15px;
+    color: #555555;
+    background-color: #FBFBFB;
+    border-radius: 8px;
+    margin-bottom: 30px;
+}

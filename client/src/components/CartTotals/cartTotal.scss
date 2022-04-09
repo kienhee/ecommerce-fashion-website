@@ -1,0 +1,21 @@
+@import "../../assets/scss/_variable.scss";
+@import "../../assets/scss/_mixin.scss";
+.cartTotal{
+    margin-bottom: 120px;
+    &__container{
+        max-width: 530px;
+        margin-bottom: 20px;
+    }
+    &__info{
+        @include flex(space-between,center);
+        padding: 17px 0;
+        border-bottom: 1px solid #E5E5E5;
+        &-title{
+            font-weight: 700;
+            
+        }
+    }
+    &__info:last-child{
+        border: none;
+    }
+}
