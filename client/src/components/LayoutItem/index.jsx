@@ -8,7 +8,7 @@ export default function LayoutItem(props) {
           <Link to={`/detail/${product.id}`} key={product.id}>
             <div className="layout__item">
               <div className="layout__img">
-                <img src={product.imageURL} alt="" />
+                <img src={product.image[0]} alt="" />
               </div>
               <h3 className="layout__name">{product.name}</h3>
               <p className="layout__price">
